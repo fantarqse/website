@@ -2,17 +2,20 @@ package website
 
 import (
 	"log"
-	"net/http"
+
+	"website/internal/server"
 )
 
 const port string = ":8888"
 
 func Run() {
 	// TODO: add static file
-	// TODO: init router
+	srv := server.New()
+	srv.Routes()
+
 	log.Printf("Starting server on %s\n", port)
-	if err := http.ListenAndServe(port, nil); err != nil {
-		log.Fatalf("the server failed to start: %s", err)
+	if err := srv.Start(port); err != nil {
+		log.Fatalf("Server failed to start: %v", err)
 	}
 
 	// TODO: Graceful shutdown

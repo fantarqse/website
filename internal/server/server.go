@@ -28,7 +28,8 @@ func (s *Server) Routes() {
 	fs := http.FileServer(http.Dir("./web/static"))
 	s.mux.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	s.mux.HandleFunc("GET /index", s.MainPage)
+	s.mux.HandleFunc("GET /index", s.MainPage)    // TODO: change the handler name
+	s.mux.HandleFunc("GET /second", s.SecondPage) // TODO: change the handler name
 	s.mux.HandleFunc("GET /health", s.Health)
 }
 

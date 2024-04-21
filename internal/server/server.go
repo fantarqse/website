@@ -30,6 +30,9 @@ func (s *Server) Routes() {
 
 	s.mux.HandleFunc("GET /index", s.MainPage)    // TODO: change the handler name
 	s.mux.HandleFunc("GET /second", s.SecondPage) // TODO: change the handler name
+	s.mux.HandleFunc("GET /third", s.ThirdPage)   // TODO: change the handler name
+	s.mux.HandleFunc("GET /fourth", s.FourthPage) // TODO: change the handler name
+
 	s.mux.HandleFunc("GET /health", s.Health)
 }
 

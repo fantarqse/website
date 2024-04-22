@@ -1,16 +1,23 @@
-body {
-    font-family: monospace;
-    font-size: 20px;
-    text-align: center;
-    margin: 20px 0px;
+.header {
+    font-family: "IBM Plex Mono", monospace;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-a {
+.header .logo {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: bolder;
+    font-size: 45px;
+}
+
+.header .navbar {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 20px;
+}
+
+.header .navbar a {
     text-decoration: none;
     color: #000;
-    margin: 30px;
-}
-
-hr {
-    margin-top: 20px;
+    margin-right: 10px;
 }

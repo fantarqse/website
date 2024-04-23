@@ -1,7 +1,13 @@
 package main
 
-import website "website/cmd"
+import (
+	"log"
+
+	website "website/cmd"
+)
 
 func main() {
-	website.Run()
+	if err := website.Run(); err != nil {
+		log.Fatalf("failed to start server: %s", err.Error())
+	}
 }

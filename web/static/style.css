@@ -1,8 +1,33 @@
+body {
+    font-family: "IBM Plex Mono", monospace;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+hr {
+    width: 100vw;
+    border: 0;
+    height: 1px;
+    background-color: #333;
+    margin-left: calc(-50vw + 50%);
+    margin-right: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .header {
     font-family: "IBM Plex Mono", monospace;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 .header .logo {

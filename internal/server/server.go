@@ -19,7 +19,7 @@ func New(tmpls *template.Template) *Server {
 	}
 }
 
-func (s *Server) Routes() {
+func (s *Server) Routes() *Server {
 	// static files
 	/*
 		TODO: read about http.FileServer
@@ -34,6 +34,8 @@ func (s *Server) Routes() {
 	s.mux.HandleFunc("GET /fourth", s.FourthPage) // TODO: change the handler name
 
 	s.mux.HandleFunc("GET /health", s.Health)
+
+	return s
 }
 
 func (s *Server) Start(port string) error {

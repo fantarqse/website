@@ -16,9 +16,7 @@ func Run() error {
 		return err
 	}
 
-	srv := server.New(tmpls)
-	srv.Routes()
-	if err := srv.Start(port); err != nil {
+	if err := server.New(tmpls).Routes().Start(port); err != nil {
 		return err
 	}
 
